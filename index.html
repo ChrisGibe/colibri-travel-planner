@@ -1,13 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Colibri Travel Planner</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+  <body class="font-poppins leading-text">
+    <ul class="flex gap-28 px-10 py-3 btn-link fixed bottom-20 left-1/2 -translate-x-1/2 z-10 blurred">
+      <li>
+        <a href="#" class="text-xs font-bold uppercase text-white ">Pourquoi</a>
+      </li>
+      <li>
+        <a href="#" class="text-xs font-bold uppercase text-white ">Qui suis-je</a>
+      </li>
+      <li>
+        <a href="#" class="text-xs font-bold uppercase text-white ">Comment</a>
+      </li>
+      <li>
+        <a href="#" class="text-xs font-bold uppercase text-white ">Offres</a>
+      </li>
+    </ul>
+    <div class="w-full h-screen relative">
+      <img src="./static/img/colibri-logo.png" alt="Colibri Travel Planner logo" class="absolute top-10 left-10 logo">
+      <section class="absolute top-1/2 -translate-y-2/4 left-10 w-2/3">
+        <h1 class="text-ocean text-8xl leading-h1-lh opacity-80 font-bold mb-4 font-unbounded">Colibri Travel Planner</h1>
+        <p class="font-normal text-xl text-white w-3/4 mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor est, auctor ut mauris et, consectetur convallis mauris. Aenean vel accumsan velit, a sagittis nibh.</p>
+        <a href="#" class="font-bold uppercase text-white py-3 px-4 text-sm blurred">Organisons votre voyage</a>
+      </section>
+      <picture class="w-full h-screen flex">
+        <source srcset="./static/img/desktop-banner.webp" />
+        <img class="w-full h-screen" src="./static/img/desktop-banner.webp" alt="">
+      </picture>
+    </div>
+    <div class="bg-body-texture pt-40 pb-32">
+      <h2>Pourquoi ?</h2>
+
+    </div>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>
