@@ -13,9 +13,14 @@ export default {
       'h1-lh': '1.04',
       'text': '1.2',
     },
+    letterSpacing: {
+      'h3-ls': '6.4px',
+    },
     colors: {
+      'forest': '#143D3D',
       'ocean': '#6FFFFF',
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'dirt': '#654D40'
     },
     backgroundImage: {
       'body-texture': "url('static/img/background.webp')",
