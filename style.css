@@ -35,6 +35,10 @@ body {
   scrollbar-width: none;
 }
 
+body {
+  position: relative;
+}
+
 html.lenis, html.lenis body {
   height: auto;
 }
@@ -91,3 +95,19 @@ html.lenis, html.lenis body {
 .mySwiper {
   max-height: 572px;
 }
+
+#canvas {
+  /* make the canvas wrapper fits the document */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.plane img {
+  /* hide the img element */
+  display: none;
+}
+
