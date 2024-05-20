@@ -57,10 +57,10 @@
               <p class="mb-6 pr-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor est, auctor ut mauris et, consectetur convallis mauris. Aenean vel accumsan velit, a sagittis nibh.</p>
               <p class="pr-6 mb-36">Vestibulum hendrerit lorem non erat fringilla, sed lobortis est imperdiet. Donec posuere commodo orci, ac congue leo lacinia vitae. Integer maximus ullamcorper pellentesque. Ut purus mauris, scelerisque sed lectus quis, suscipit vulputate urna.</p>
             </div>
-            <div class="col-span-4 col-start-8 relative plane">
-         
-                <img class="w-full h-auto flex" src="./static/img/profil.webp" alt="">
-             
+            <div class="col-span-4 col-start-8 relative multi-textures">
+              <img src="../static/img/displacement.jpg" crossorigin="" data-sampler="displacement" />
+              <img class="" src="./static/img/profil-2.jpg">
+              <img class="" src="./static/img/profil.jpg"   crossorigin="">
             </div>
             <div class="col-span-3 col-start-10 relative -translate-y-2/4">
               <picture class="w-full h-auto flex">
@@ -245,49 +245,8 @@
           </div>
         </div>
       </footer>
+
       <script type="module" src="./js/modules/curtains.js"></script>
-      <script id="plane-vs" type="x-shader/x-vertex">
-        precision mediump float;
-        // those are the mandatory attributes that the lib sets
-        attribute vec3 aVertexPosition;
-        attribute vec2 aTextureCoord;
-        // those are mandatory uniforms that the lib sets and that contain our model view and projection matrix
-        uniform mat4 uMVMatrix;
-        uniform mat4 uPMatrix;
-        // our texture matrix that will handle image cover
-        uniform mat4 uTextureMatrix0;
-        // pass your vertex and texture coords to the fragment shader
-        varying vec3 vVertexPosition;
-        varying vec2 vTextureCoord;
-        void main() {
-        vec3 vertexPosition = aVertexPosition;
-        gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
-        // set the varyings
-        // here we use our texture matrix to calculate the accurate texture coords
-        vTextureCoord = (uTextureMatrix0 * vec4(aTextureCoord, 0.0, 1.0)).xy;
-        vVertexPosition = vertexPosition;
-        }
-        </script>
-        <!-- fragment shader -->
-        <script id="plane-fs" type="x-shader/x-fragment">
-        precision mediump float;
-        // get our varyings
-        varying vec3 vVertexPosition;
-        varying vec2 vTextureCoord;
-        // the uniform we declared inside our javascript
-        uniform float uTime;
-        // our texture sampler (default name, to use a different name please refer to the documentation)
-        uniform sampler2D uSampler0;
-        void main() {
-        // get our texture coords from our varying
-        vec2 textureCoord = vTextureCoord;
-        // displace our pixels along the X axis based on our time uniform
-        // textures coords are ranging from 0.0 to 1.0 on both axis
-        textureCoord.x += sin(textureCoord.y * 25.0) * cos(textureCoord.x * 25.0) * (cos(uTime / 50.0)) / 25.0;
-        // map our texture with the texture matrix coords
-        gl_FragColor = texture2D(uSampler0, textureCoord);
-        }
-        </script>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>

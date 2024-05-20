@@ -106,6 +106,20 @@ html.lenis, html.lenis body {
   z-index: 1;
 }
 
+
+.multi-textures {
+  z-index: 40;
+  cursor: pointer;
+}
+
+.multi-textures img {
+  display: none;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+
 .plane img {
   /* hide the img element */
   display: none;
