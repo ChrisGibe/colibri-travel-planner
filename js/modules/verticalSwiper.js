@@ -3,7 +3,7 @@ import { Pagination, A11y } from 'swiper/modules';
 
 
 export const initVerticalSwiper = () => {
-    new Swiper(".mySwiper", {
+    new Swiper(".mySwiperVertical", {
         modules: [Pagination, A11y],
         direction: "vertical",
         slidesPerView: 1,
