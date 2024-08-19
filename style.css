@@ -76,7 +76,7 @@ html.lenis, html.lenis body {
 .hollow {
   border-radius: 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.30);
-  background: radial-gradient(189.05% 160.98% at 50% 100%, rgba(255, 255, 255, 0.00) 0%, rgba(57, 57, 57, 0.25) 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   backdrop-filter: blur(3px);
 }
 
@@ -90,4 +90,36 @@ html.lenis, html.lenis body {
 
 .mySwiperVertical {
   max-height: 572px;
+}
+
+.mySwiperVertical .swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  opacity: 1;
+}
+
+.mySwiperVertical .swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: transparent !important;
+  opacity: 1;
+  transition: all .2s ease;
+  border: 1px solid #143D3D;
+}
+.mySwiperVertical .swiper-pagination-bullet-active::before {
+  background-color: #143D3D !important;
+}
+
+a { 
+  letter-spacing: 0.15em;
 }

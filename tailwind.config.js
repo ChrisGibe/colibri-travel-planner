@@ -20,7 +20,8 @@ export default {
       'forest': '#143D3D',
       'ocean': '#6FFFFF',
       'white': '#FFFFFF',
-      'dirt': '#654D40'
+      'dirt': '#654D40',
+      'dark': '#1E1E1E',
     },
     backgroundImage: {
       'body-texture': "url('static/img/background.webp')",
