@@ -123,3 +123,8 @@ html.lenis, html.lenis body {
 a { 
   letter-spacing: 0.15em;
 }
+
+.test {
+
+  filter: blur(10px); /* Appliquer un flou sur l'image */
+}
