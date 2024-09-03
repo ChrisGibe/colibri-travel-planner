@@ -22,6 +22,7 @@ export default {
       'white': '#FFFFFF',
       'dirt': '#654D40',
       'dark': '#1E1E1E',
+      'gray': '#a1a1aa',
     },
     backgroundImage: {
       'body-texture': "url('static/img/background.webp')",
