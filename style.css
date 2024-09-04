@@ -72,23 +72,12 @@ html.lenis, html.lenis body {
   backdrop-filter: blur(5px);
 }
 
-.blurred-compass {
-  border-radius: 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.30);
-  background: linear-gradient(0deg, rgba(20, 61, 61, 0.20) 0%, rgba(20, 61, 61, 0.20) 100%), radial-gradient(194.78% 165.85% at 50% 100%, rgba(255, 255, 255, 0.00) 0%, rgba(57, 57, 57, 0.25) 100%);
-  box-shadow: 0px 16px 3px -12px rgba(0, 0, 0, 0.40);
-  backdrop-filter: blur(1px);
-}
 
 .hollow {
   border-radius: 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.30);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   backdrop-filter: blur(3px);
-}
-
-.clip-left {
-  clip-path: polygon(30% 91%,71% 81%,75% 100%,0% 100%);
 }
 
 .line {
@@ -129,9 +118,4 @@ html.lenis, html.lenis body {
 
 a { 
   letter-spacing: 0.15em;
-}
-
-.test {
-
-  filter: blur(10px); /* Appliquer un flou sur l'image */
 }
