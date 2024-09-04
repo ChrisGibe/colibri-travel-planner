@@ -7,6 +7,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("static/fonts/unbounded/Unbounded-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
   font-style: normal;
   font-weight: 700;
   src: url("static/fonts/unbounded/Unbounded-Bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -21,6 +23,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("static/fonts/poppins/Poppins-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -28,6 +31,7 @@
   font-style: normal;
   font-weight: 700;
   src: url("static/fonts/poppins/Poppins-Bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 html, 
