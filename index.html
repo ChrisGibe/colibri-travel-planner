@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colibri Travel Planner</title>
   </head>
-  <body class="font-poppins leading-text overflow-hidden">
-    <ul class="hidden lg:flex gap-28 px-5 lg:px-10 py-3 btn-link fixed bottom-20 left-1/2 -translate-x-1/2 z-30 blurred">
+  <body class="font-poppins leading-text overflow-hidden w-full h-auto">
+    <ul class="hidden lg:flex gap-28 px-5 lg:px-10 py-3 btn-link fixed bottom-20 left-1/2 -translate-x-1/2 z-40 blurred">
       <li>
-        <a href="#pourquoi" class="text-xs font-bold uppercase text-white">Pourquoi</a>
+        <a href="#pourquoi" class="text-xs font-bold uppercase text-white nav-link">Pourquoi</a>
       </li>
       <li>
-        <a href="#" class="text-xs font-bold uppercase text-white ">Qui suis-je</a>
+        <a href="#who-i-am" class="text-xs font-bold uppercase text-white nav-link">Qui suis-je</a>
       </li>
       <li>
-        <a href="#comment" class="text-xs font-bold uppercase text-white ">Comment</a>
+        <a href="#comment" class="text-xs font-bold uppercase text-white nav-link">Comment</a>
       </li>
       <li>
-        <a href="#offres" class="text-xs font-bold uppercase text-white ">Offres</a>
+        <a href="#offres" class="text-xs font-bold uppercase text-white nav-link">Offres</a>
       </li>
     </ul>
     <div class="w-full h-screen relative">
@@ -56,31 +56,16 @@
           </div>
           <div class="grid grid-cols-12 gap-x-4">
             <div class="col-span-12 lg:col-span-5 lg:col-start-2">
-              <div class="swiper mySwiperHorizontal">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="w-full h-auto flex" src="./static/img/horizontal-swiper/slide-one.webp" alt="">
-                  </div>
-                  <div class="swiper-slide">
-
-                  </div>
-                  <div class="swiper-slide">
-
-                  </div>
-                  <div class="swiper-slide">
-
-                  </div>
-                  <div class="swiper-slide">
-    
-                  </div>
-                </div>
-              </div>
+              <picture class="w-full h-auto flex">
+                <source srcset="./static/img/horizontal-swiper/slide-one.webp" />
+                <img class="w-full h-auto flex" src="./static/img/horizontal-swiper/slide-one.webp" loading="lazy" alt="">
+              </picture>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="pourquoi" class="bg-body-texture pt-10 lg:pt-40 relative">
+      <div id="who-i-am" class="bg-body-texture pt-10 lg:pt-40 relative">
         <div class="px-5 lg:px-10 mx-auto">
           <div class="grid grid-cols-12 gap-x-4">
             <div class="col-span-12 lg:col-span-6 lg:col-start-2">
@@ -156,13 +141,13 @@
             <div class="col-span-9 lg:col-span-4 lg:col-start-8 relative">
               <picture class="w-full h-auto flex">
                 <source srcset="./static/img/profil.webp" />
-                <img class="w-full h-auto flex" src="./static/img/profil.webp" alt="">
+                <img class="w-full h-auto flex" src="./static/img/profil.webp" alt="" loading="lazy">
               </picture>
             </div>
             <div class="col-span-8 col-start-5 lg:col-span-3 lg:col-start-10 relative -translate-y-2/4">
               <picture class="w-full h-auto flex">
                 <source srcset="./static/img/on-profil.webp" />
-                <img class="w-full h-auto flex" src="./static/img/on-profil.webp" alt="">
+                <img class="w-full h-auto flex" src="./static/img/on-profil.webp" alt="" loading="lazy">
               </picture>
             </div>
           </div>
@@ -235,11 +220,11 @@
       </div>
 
       <div class="bg-body-texture pb-20 lg:pb-0 pt-40 relative overflow-hidden">
-        <div class="lg:px-10 mx-auto">
+        <div class="lg:px-10 mx-auto lg:translate-y-20 relative z-10">
           <div class="grid grid-cols-12 gap-x-2 lg:gap-x-4 relative z-20 mb-2 lg:mb-0">
             <picture class="col-span-7 lg:col-span-5 w-full h-auto flex relative">
               <source srcset="./static/img/parallax/one.webp" />
-              <img class="w-full h-fit flex aspect-[553/827] clip-svg" src="./static/img/parallax/one.webp" alt="">
+              <img class="w-full h-fit flex aspect-[553/827] clip-svg" src="./static/img/parallax/one.webp" alt="" loading="lazy">
 
               <div class="flex lg:hidden translate-x-full absolute -top-4 -right-4 -translate-y-full numbers">
                 <div class="flex flex-col">
@@ -260,7 +245,7 @@
             </picture>
             <picture class="col-span-5 lg:col-start-6 w-full h-auto flex self-start lg:self-end translate-y-16 lg:-translate-y-1/3 relative">
               <source srcset="./static/img/parallax/two.webp" />
-              <img class="w-full h-fit flex aspect-[553/368]" src="./static/img/parallax/two.webp" alt="">
+              <img class="w-full h-fit flex aspect-[553/368]" src="./static/img/parallax/two.webp" alt="" loading="lazy">
               <div class="hidden lg:flex translate-x-full absolute -top-4 -right-4 -translate-y-full  numbers">
                 <div class="flex flex-col">
                   <p class="text-dark text-sm">+40.76926211896542,</p>
@@ -276,21 +261,21 @@
           <div class="grid grid-cols-12 gap-x-4 lg:-translate-y-1/2 relative z-30">
             <picture class="col-span-8 lg:col-span-6 col-start-2 lg:col-start-3 w-full h-auto flex self-end z-10 lg:z-0 relative">
               <source srcset="./static/img/parallax/three.webp" />
-              <img class="w-full h-fit flex aspect-[668/445]" src="./static/parallax/img/three.webp" alt="">
+              <img class="w-full h-fit flex aspect-[668/445]" src="./static/parallax/img/three.webp" alt="" loading="lazy">
               <svg width="137" height="131" viewBox="0 0 137 131" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute w-1/4 lg:-w-auto left-1/2 lg:left-0 bottom-0 -translate-x-1/2 translate-y-1/2">
                 <path d="M121.523 52.7451C129 58.7436 133.457 64.6491 135.378 70.4514C137.295 76.2387 136.706 81.9766 133.988 87.6934C128.528 99.1766 114.496 110.53 95.0404 121.732C83.908 128.141 67.6208 131.703 52.0775 130.13C36.5389 128.557 21.8293 121.865 13.7222 107.862C8.85875 99.4618 7.6401 93.8434 6.76902 86.8958C6.61461 85.6642 6.47113 84.3901 6.32035 83.0512C5.61697 76.8049 4.75489 69.1493 1.88375 57.8322C-1.12229 45.9833 0.978425 35.766 6.16479 27.3713C11.3587 18.9644 19.6638 12.3612 29.0924 7.80154C38.5198 3.24251 49.0411 0.741293 58.6291 0.516606C68.229 0.291642 76.8262 2.34907 82.4689 6.82885C90.7725 13.4212 93.4461 18.38 96.4821 24.0108C96.8721 24.7342 97.2681 25.4686 97.6828 26.219C101.353 32.8616 106.43 40.6365 121.523 52.7451ZM93.4829 59.5596C96.9704 62.3654 99.0231 65.1072 99.9039 67.7746C100.78 70.4272 100.515 73.0591 99.2631 75.6983C96.737 81.0259 90.2138 86.3382 81.0802 91.6115C75.9044 94.5997 68.3125 96.2678 61.0646 95.5322C53.8216 94.797 47.007 91.6741 43.2559 85.1771C40.9941 81.2596 40.43 78.6499 40.024 75.403C39.9519 74.8258 39.8847 74.2276 39.8141 73.5983C39.4837 70.6559 39.0769 67.0326 37.7239 61.6845C36.33 56.1749 37.3044 51.4366 39.7031 47.5433C42.1092 43.6378 45.9649 40.5583 50.3599 38.427C54.7537 36.2962 59.6571 35.1279 64.1206 35.023C68.5959 34.9178 72.5618 35.882 75.1441 37.9378C79.0003 41.0079 80.2343 43.3027 81.6562 45.947C81.8395 46.2879 82.026 46.6346 82.2216 46.9896C83.962 50.148 86.3687 53.836 93.4829 59.5596ZM81.5802 92.4775C90.7236 87.1986 97.4972 81.7567 100.167 76.1267C101.513 73.287 101.82 70.3892 100.854 67.461C99.8915 64.5477 97.686 61.6576 94.1097 58.7804C87.0964 53.138 84.7745 49.5506 83.0974 46.507C82.9051 46.1579 82.7205 45.8145 82.5378 45.4747C81.1016 42.8027 79.7861 40.3553 75.7669 37.1555C72.9301 34.897 68.6957 33.9152 64.0971 34.0233C59.4868 34.1316 54.4428 35.3356 49.9235 37.5272C45.4054 39.7183 41.3824 42.9111 38.8517 47.0187C36.3136 51.1385 35.2932 56.154 36.7544 61.9298C38.0896 67.2072 38.4889 70.7618 38.8191 73.7004C38.8903 74.3342 38.9583 74.9394 39.0318 75.5271C39.4495 78.8683 40.0445 81.6147 42.3899 85.6771C46.3527 92.5408 53.5181 95.7714 60.9636 96.5271C68.4041 97.2823 76.2089 95.5786 81.5802 92.4775Z" />
                 <path d="M121.523 52.7451C129 58.7436 133.457 64.6491 135.378 70.4514C137.295 76.2387 136.706 81.9766 133.988 87.6934C128.528 99.1766 114.496 110.53 95.0404 121.732C83.908 128.141 67.6208 131.703 52.0775 130.13C36.5389 128.557 21.8293 121.865 13.7222 107.862C8.85875 99.4618 7.6401 93.8434 6.76902 86.8958C6.61461 85.6642 6.47113 84.3901 6.32035 83.0512C5.61697 76.8049 4.75489 69.1493 1.88375 57.8322C-1.12229 45.9833 0.978425 35.766 6.16479 27.3713C11.3587 18.9644 19.6638 12.3612 29.0924 7.80154C38.5198 3.24251 49.0411 0.741293 58.6291 0.516606C68.229 0.291642 76.8262 2.34907 82.4689 6.82885C90.7725 13.4212 93.4461 18.38 96.4821 24.0108C96.8721 24.7342 97.2681 25.4686 97.6828 26.219C101.353 32.8616 106.43 40.6365 121.523 52.7451ZM93.4829 59.5596C96.9704 62.3654 99.0231 65.1072 99.9039 67.7746C100.78 70.4272 100.515 73.0591 99.2631 75.6983C96.737 81.0259 90.2138 86.3382 81.0802 91.6115C75.9044 94.5997 68.3125 96.2678 61.0646 95.5322C53.8216 94.797 47.007 91.6741 43.2559 85.1771C40.9941 81.2596 40.43 78.6499 40.024 75.403C39.9519 74.8258 39.8847 74.2276 39.8141 73.5983C39.4837 70.6559 39.0769 67.0326 37.7239 61.6845C36.33 56.1749 37.3044 51.4366 39.7031 47.5433C42.1092 43.6378 45.9649 40.5583 50.3599 38.427C54.7537 36.2962 59.6571 35.1279 64.1206 35.023C68.5959 34.9178 72.5618 35.882 75.1441 37.9378C79.0003 41.0079 80.2343 43.3027 81.6562 45.947C81.8395 46.2879 82.026 46.6346 82.2216 46.9896C83.962 50.148 86.3687 53.836 93.4829 59.5596ZM81.5802 92.4775C90.7236 87.1986 97.4972 81.7567 100.167 76.1267C101.513 73.287 101.82 70.3892 100.854 67.461C99.8915 64.5477 97.686 61.6576 94.1097 58.7804C87.0964 53.138 84.7745 49.5506 83.0974 46.507C82.9051 46.1579 82.7205 45.8145 82.5378 45.4747C81.1016 42.8027 79.7861 40.3553 75.7669 37.1555C72.9301 34.897 68.6957 33.9152 64.0971 34.0233C59.4868 34.1316 54.4428 35.3356 49.9235 37.5272C45.4054 39.7183 41.3824 42.9111 38.8517 47.0187C36.3136 51.1385 35.2932 56.154 36.7544 61.9298C38.0896 67.2072 38.4889 70.7618 38.8191 73.7004C38.8903 74.3342 38.9583 74.9394 39.0318 75.5271C39.4495 78.8683 40.0445 81.6147 42.3899 85.6771C46.3527 92.5408 53.5181 95.7714 60.9636 96.5271C68.4041 97.2823 76.2089 95.5786 81.5802 92.4775Z" stroke="#143D3D"/>
                 </svg>
             </picture>
-            <picture class="col-span-6 lg:col-span-3 col-start-7 lg:col-start-10 absolute -translate-x-[10%] -translate-y-[60%] lg:-translate-y-0 lg:-translate-x-0 w-full h-auto flex">
+            <picture class="col-span-6 lg:col-span-4 col-start-7 lg:col-start-9 absolute lg:relative -translate-x-[10%] -translate-y-[60%] lg:-translate-y-0 lg:-translate-x-0 w-full h-auto">
               <source srcset="./static/img/parallax/four.webp" />
-              <img class="w-full h-fit flex aspect-[437/656]" src="./static/img/parallax/four.webp" alt="">
+              <img class="w-full h-auto flex aspect-[437/656]" src="./static/img/parallax/four.webp" alt="" loading="lazy">
             </picture>
           </div>
-          <div class="grid grid-cols-12 gap-x-4 lg:-translate-y-[85%] relative z-20 mt-2 lg:mt-0">
+          <div class="grid grid-cols-12 gap-x-4 lg:-translate-y-[87%] relative z-20 mt-2 lg:mt-0">
             <picture class="col-span-5 col-start-5 w-full h-auto flex">
               <source srcset="./static/img/parallax/five.webp" />
-              <img class="w-full h-fit flex aspect-[553/369]" src="./static/img/parallax/five.webp" alt="">
+              <img class="w-full h-fit flex aspect-[553/369]" src="./static/img/parallax/five.webp" alt="" loading="lazy">
             </picture>
           </div>
         </div>
@@ -301,7 +286,7 @@
           </svg>
       </div>
 
-      <div id="comment" class="bg-body-texture pb-32 relative pt-20 lg:-mt-0">
+      <div id="comment" class="bg-body-texture pb-32 relative lg:-mt-0">
         <div class="px-5 lg:px-0 mx-auto">
           <div class="grid grid-cols-12 gap-x-4 mb-4">
             <div class="col-span-12 lg:col-span-5 lg:col-start-2">
@@ -314,27 +299,34 @@
             </div>
           </div>
           <div class="grid grid-cols-12 gap-x-4 mb-20">
-            <picture class="col-span-1 w-full h-auto hidden lg:flex">
-              <source srcset="./static/img/vertical-slider/slide-one-left.webp" />
-              <img class="w-full h-auto flex" src="../static/img/vertical-slider/slide-one-left.webp" alt="">
-            </picture>
+            <div class="col-span-1 w-full h-auto hidden lg:flex relative">
+              <picture class="w-full h-auto">
+                <source srcset="./static/img/vertical-slider/slide-one-left.webp" />
+                <img class="w-full h-full flex" src="../static/img/vertical-slider/slide-one-left.webp" alt="" loading="lazy">
+              </picture>
+              <svg class="absolute left-0 bottom-0" width="131" height="275" viewBox="0 0 131 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6812 244.907C4.20114 245.676 -9.92485 247.875 -21.5385 249.714L-22.189 249.817C-33.5136 251.612 -42.3634 253.014 -49.6362 252.378C-56.9934 251.733 -62.7132 249.002 -67.6981 242.406C-72.7131 235.77 -76.9934 225.21 -81.3708 208.873C-85.8841 192.029 -95.0313 174.808 -103.667 158.55C-105.376 155.333 -107.065 152.154 -108.693 149.023C-113.632 139.529 -118.022 130.476 -120.786 122.122C-123.552 113.764 -124.67 106.161 -123.125 99.5479C-117.646 76.1001 -103.712 63.2703 -87.1604 54.2202C-78.874 49.6892 -69.9391 46.1101 -61.0735 42.6208C-60.5936 42.4319 -60.1138 42.2433 -59.6343 42.0547C-51.268 38.7651 -42.9961 35.5126 -35.4786 31.5793C-4.9314 15.5965 27.7226 20.503 53.3192 36.7215C78.9264 52.9468 97.4158 80.4612 99.633 109.603C101.277 131.212 99.1218 164.324 87.864 192.395C76.6108 220.454 56.3112 243.384 21.6812 244.907Z" stroke="white"/>
+                <path d="M12.8158 207.252C1.40195 207.761 -7.82243 209.201 -15.4003 210.404L-15.8052 210.468C-23.2107 211.644 -28.9663 212.558 -33.689 212.149C-38.4434 211.738 -42.1265 209.986 -45.3427 205.74C-48.5889 201.455 -51.3687 194.615 -54.2148 183.994C-57.1559 173.017 -63.1258 161.797 -68.7511 151.225C-69.8633 149.135 -70.962 147.07 -72.0212 145.037C-75.2377 138.864 -78.0911 132.988 -79.885 127.57C-81.6804 122.147 -82.3949 117.238 -81.3943 112.981C-77.8229 97.7867 -68.7683 89.4681 -57.9954 83.5878C-52.5982 80.6418 -46.7774 78.3124 -40.9913 76.0375C-40.6772 75.914 -40.3633 75.7907 -40.0495 75.6674C-34.5925 73.524 -29.1866 71.4007 -24.272 68.8336C-4.40004 58.4535 16.8332 61.6149 33.4795 72.1252C50.1365 82.6422 62.1465 100.485 63.5728 119.378C64.6327 133.416 63.2102 154.929 55.8643 173.164C48.5233 191.388 35.3146 206.247 12.8158 207.252Z" stroke="white"/>
+                <path d="M5.41441 176.345C-1.0127 176.636 -6.20708 177.449 -10.4667 178.126L-10.6694 178.159C-14.8531 178.824 -18.0649 179.335 -20.6915 179.111C-23.3066 178.887 -25.3166 177.935 -27.0812 175.61C-28.876 173.246 -30.4264 169.45 -32.0198 163.504C-33.6748 157.327 -37.0393 151.015 -40.1956 145.093C-40.8188 143.924 -41.4338 142.77 -42.026 141.635C-43.8302 138.178 -45.4237 134.9 -46.4234 131.883C-47.4245 128.861 -47.8103 126.156 -47.2598 123.828C-45.2647 115.39 -40.2264 110.768 -34.2067 107.488C-31.1862 105.842 -27.9264 104.538 -24.673 103.26C-24.4954 103.191 -24.3178 103.121 -24.1403 103.051C-21.076 101.849 -18.0272 100.653 -15.2537 99.2064C-4.16272 93.4224 7.68439 95.1681 16.9795 101.017C26.2855 106.872 32.9795 116.807 33.7667 127.314C34.3543 135.157 33.5466 147.178 29.4268 157.36C25.3121 167.53 17.9409 175.778 5.41441 176.345Z" stroke="white"/>
+                </svg>
+            </div>
             <div class="col-span-12 lg:col-span-7 lg:col-start-2">
               <div class="swiper mySwiperVertical relative">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide lg:px-32 lg:pt-44">
-                    <h3 class="text-3xl font-medium tracking-h3-ls text-forest mb-3">Step 1</h3>
+                    <h3 class="text-3xl font-medium tracking-h3-ls text-forest mb-3 uppercase">Step 1</h3>
                     <p>Entamez votre aventure par un échange approfondi avec votre travel planner. Vous discutez de vos désirs, préférences, et besoins spécifiques pour le voyage. Cette étape clé permet de cerner vos attentes et de poser les bases d’un itinéraire qui vous correspond parfaitement..</p>
                   </div>
                   <div class="swiper-slide lg:px-32 lg:pt-44">
-                    <h3 class="text-3xl font-medium  tracking-h3-ls text-forest mb-3">Step 2</h3>
+                    <h3 class="text-3xl font-medium  tracking-h3-ls text-forest mb-3 uppercase">Step 2</h3>
                     <p>Votre travel planner se met au travail pour créer un itinéraire entièrement personnalisé. Chaque destination, activité, et expérience est choisie avec soin pour refléter vos goûts. Vous recevez une proposition qui intègre vos passions, pour un voyage aussi unique que vous.</p>
                   </div>
                   <div class="swiper-slide lg:px-32 lg:pt-44">
-                    <h3 class="text-3xl font-medium  tracking-h3-ls text-forest mb-3">Step 3</h3>
+                    <h3 class="text-3xl font-medium  tracking-h3-ls text-forest mb-3 uppercase">Step 3</h3>
                     <p>Une fois l'itinéraire proposé, vous avez l'opportunité de le revoir en détail. Votre travel planner est à l’écoute de vos retours et procède aux ajustements nécessaires. L'objectif est d'atteindre un itinéraire final qui répond parfaitement à vos attentes et envies.</p>
                   </div>
                   <div class="swiper-slide lg:px-32 lg:pt-44">
-                    <h3 class="text-3xl font-medium  tracking-h3-ls text-forest mb-3">Step 4</h3>
+                    <h3 class="text-3xl font-medium  tracking-h3-ls text-forest mb-3 uppercase">Step 4</h3>
                     <p>Avec votre accord, votre travel planner s’occupe de toutes les réservations nécessaires : vols, hébergements, activités, et même les petits détails. Vous pouvez voyager l’esprit tranquille, sachant que chaque aspect de votre voyage est minutieusement organisé.</p>
                   </div>
                   <div class="swiper-slide lg:px-32 lg:pt-44">
@@ -345,10 +337,17 @@
                 <div class="swiper-pagination absolute bottom-0 !top-auto"></div>
               </div>
             </div>
-            <picture class="col-span-4 w-full h-auto hidden lg:flex">
-              <source srcset="./static/img/vertical-slider/slide-one-right.webp" />
-              <img class="w-full h-auto flex" src="./static/img/vertical-slider/slide-one-right.webp" alt="">
-            </picture>
+            <div class="col-span-4 w-full h-auto hidden lg:flex relative">
+              <picture class="w-full h-auto">
+                <source srcset="./static/img/vertical-slider/slide-one-right.webp" />
+                <img class="w-full h-auto flex" src="./static/img/vertical-slider/slide-one-right.webp" alt="" loading="lazy">
+              </picture>
+              <svg class="absolute right-0 top-[91px] " width="155" height="275" viewBox="0 0 155 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M160.681 244.907C143.201 245.676 129.075 247.875 117.461 249.714L116.811 249.817C105.486 251.612 96.6366 253.014 89.3638 252.378C82.0066 251.733 76.2868 249.002 71.3019 242.406C66.2869 235.77 62.0066 225.21 57.6292 208.873C53.1159 192.029 43.9687 174.808 35.3326 158.55C33.624 155.333 31.9354 152.154 30.3066 149.023C25.3677 139.529 20.9776 130.476 18.2136 122.122C15.4482 113.764 14.3302 106.161 15.8754 99.5479C21.3537 76.1001 35.2885 63.2703 51.8396 54.2202C60.126 49.6892 69.0609 46.1101 77.9265 42.6208C78.4064 42.4319 78.8862 42.2433 79.3657 42.0547C87.732 38.7651 96.0039 35.5126 103.521 31.5793C134.069 15.5965 166.723 20.503 192.319 36.7215C217.926 52.9468 236.416 80.4612 238.633 109.603C240.277 131.212 238.122 164.324 226.864 192.395C215.611 220.454 195.311 243.384 160.681 244.907Z" stroke="white"/>
+                <path d="M151.816 207.252C140.402 207.761 131.178 209.201 123.6 210.404L123.195 210.468C115.789 211.644 110.034 212.558 105.311 212.149C100.557 211.738 96.8735 209.986 93.6573 205.74C90.4111 201.455 87.6313 194.615 84.7852 183.994C81.8441 173.017 75.8742 161.797 70.2489 151.225C69.1367 149.135 68.038 147.07 66.9788 145.037C63.7623 138.864 60.9089 132.988 59.115 127.57C57.3196 122.147 56.6051 117.238 57.6057 112.981C61.1771 97.7867 70.2317 89.4681 81.0046 83.5878C86.4018 80.6418 92.2226 78.3124 98.0087 76.0375C98.3228 75.914 98.6367 75.7907 98.9505 75.6674C104.408 73.524 109.813 71.4007 114.728 68.8336C134.6 58.4535 155.833 61.6149 172.479 72.1252C189.137 82.6422 201.147 100.485 202.573 119.378C203.633 133.416 202.21 154.929 194.864 173.164C187.523 191.388 174.315 206.247 151.816 207.252Z" stroke="white"/>
+                <path d="M144.414 176.345C137.987 176.636 132.793 177.449 128.533 178.126L128.331 178.159C124.147 178.824 120.935 179.335 118.309 179.111C115.693 178.887 113.683 177.935 111.919 175.61C110.124 173.246 108.574 169.45 106.98 163.504C105.325 157.327 101.961 151.015 98.8044 145.093C98.1813 143.924 97.5662 142.77 96.974 141.635C95.1698 138.178 93.5763 134.9 92.5767 131.883C91.5756 128.861 91.1898 126.156 91.7403 123.828C93.7353 115.39 98.7736 110.768 104.793 107.488C107.814 105.842 111.074 104.538 114.327 103.26C114.505 103.191 114.682 103.121 114.86 103.051C117.924 101.849 120.973 100.653 123.746 99.2064C134.837 93.4224 146.684 95.1681 155.98 101.017C165.286 106.872 171.98 116.807 172.767 127.314C173.354 135.157 172.547 147.178 168.427 157.36C164.312 167.53 156.941 175.778 144.414 176.345Z" stroke="white"/>
+                </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -422,11 +421,11 @@
             </li>
           </ul>
         </div>
-        <svg class="block lg:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 90" preserveAspectRatio="none" fill="none">
+        <svg class="block lg:hidden relative z-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 90" preserveAspectRatio="none" fill="none">
           <polygon points="0, 90 300, 0 1440 90" fill="#143D3D"  />
           <polygon points="700, 90 1440 0, 1440 90" fill="#143D3D" />
         </svg>
-        <svg class="hidden lg:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none">
+        <svg class="hidden lg:block relative z-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="none">
           <polygon points="0, 50 350, 0 1440 50" fill="#143D3D"  />
           <polygon points="700, 50 1440 0, 1440 50" fill="#143D3D" />
         </svg>

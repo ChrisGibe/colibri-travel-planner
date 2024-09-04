@@ -1,15 +1,22 @@
-import Lenis from 'lenis'
+import Lenis from "lenis";
 
 export const initLenis = () => {
-    const lenis = new Lenis()
+  const lenis = new Lenis();
 
-    lenis.on('scroll', (e) => {
+  lenis.on("scroll", (e) => {});
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  const navWhy = Array.from(document.querySelectorAll('.nav-link'))
+  navWhy.map(nav => {
+    const target = nav.getAttribute("href")
+    nav.addEventListener('click', () => {
+        lenis.scrollTo(target, { offset : 50 })
     })
-
-    function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-}
+  })
+};

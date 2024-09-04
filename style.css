@@ -72,7 +72,6 @@ html.lenis, html.lenis body {
   backdrop-filter: blur(5px);
 }
 
-
 .hollow {
   border-radius: 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.30);
