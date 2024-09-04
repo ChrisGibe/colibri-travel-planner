@@ -6,5 +6,9 @@ export const initHorizontalSwiper = () => {
     new Swiper(".mySwiperHorizontal", {
         modules: [Pagination, A11y],
         slidesPerView: 1,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
     });
 }

@@ -115,8 +115,46 @@ html.lenis, html.lenis body {
   transition: all .2s ease;
   border: 1px solid #143D3D;
 }
+
 .mySwiperVertical .swiper-pagination-bullet-active::before {
   background-color: #143D3D !important;
+}
+
+.mySwiperHorizontal .swiper-pagination {
+  position: initial !important;
+}
+
+.mySwiperHorizontal .swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  opacity: 1;
+}
+
+.mySwiperHorizontal .swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: transparent !important;
+  opacity: 1;
+  transition: all .2s ease;
+  border: 1px solid #143D3D;
+}
+
+.mySwiperHorizontal .swiper-pagination-bullet-active::before {
+  background-color: #143D3D !important;
+}
+
+nav {
+  width: calc(100% - 30vw);
 }
 
 a { 
