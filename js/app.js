@@ -6,8 +6,10 @@ import { initVerticalSwiper } from './modules/verticalSwiper'
 import { initHorizontalSwiper } from './modules/horizontalSwiper'
 import { cursor } from './modules/cursor'
 import ShuffleSentence from './modules/ShuffleSentence'
+import { loader } from './modules/loader'
 
 document.addEventListener('DOMContentLoaded', () => {
+    //loader()
     initLenis()
     initVerticalSwiper()
     initHorizontalSwiper();

@@ -7,6 +7,23 @@
     <title>Colibri Travel Planner</title>
   </head>
   <body class="font-poppins leading-text overflow-x-hidden w-full h-auto">
+
+<!--     <div class="loader fixed top-0 left-0 w-full h-screen z-50">
+      <picture class="w-full h-screen flex">
+        <source srcset="./static/img/loader-bg.webp" />
+        <img class="w-full h-screen object-cover aspect-[1440/1000]" src="./static/img/loader-bg.webp" alt="">
+      </picture>
+      <div class="flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+        <p class="text-6xl text-dirt font-unbounded relative z-50">
+          <span>C</span>
+          <div class="flex flex-col text-6xl text-dirt font-unbounded overflow-hidden">
+            <span>réer vos souvenirs</span>
+            <span>olibri travel planner</span>
+          </div>
+        </p>
+      </div>
+    </div> -->
+
     <nav role="navigation" class="hidden lg:flex justify-center fixed bottom-20 z-40 mx-auto left-0 right-0">
       <ul class="flex gap-28 px-5 lg:px-10 py-3 btn-link blurred">
         <li>
@@ -23,7 +40,29 @@
         </li>
       </ul>
     </nav>
-    <div class="w-full h-screen relative">
+    <div class="hero-banner w-full h-screen relative">
+
+      <div class="compass circle absolute top-12 right-12 w-[45px] h-[45px] !rounded-[45px] lg:w-[85px] lg:h-[85px] lg:!rounded-[85px] flex items-center justify-center blurred">
+        <div class="compass-line w-full h-[1px] lg:h-[1.5px] absolute"></div>
+        <div class="compass-line w-full h-[1px] lg:h-[1.5px] absolute origin-center rotate-90"></div>
+        <div class="compass-line w-full h-[1px] lg:h-[1.5px] absolute origin-center rotate-45"></div>
+        <div class="compass-line w-full h-[1px] lg:h-[1.5px] absolute origin-center -rotate-45"></div>
+
+        <div class="compass-small-line w-[1.5px] h-[6px] bg-white absolute -top-[7px] left-1/2 -translate-x-1/2"></div>
+        <div class="compass-small-line w-[1.5px] h-[6px] bg-white absolute -right-[5px] top-1/2 -translate-y-1/2 origin-center rotate-90"></div>
+        <div class="compass-small-line w-[1.5px] h-[6px] bg-white absolute -bottom-[7px] left-1/2 -translate-x-1/2"></div>
+        <div class="compass-small-line w-[1.5px] h-[6px] bg-white absolute -left-[5px] top-1/2 -translate-y-1/2 origin-center rotate-90"></div>
+
+        <div class="circle flex justify-center items-center w-[33px] h-[33px] !rounded-[33px] lg:w-[63px] lg:h-[63px] lg:!rounded-[63px] shadow">
+          <div class="circle w-[16px] h-[16px] !rounded-[16px] lg:w-[32px] lg:h-[32px] lg:!rounded-[32px] border border-gray border-opacity-60">
+              <p class="text-white font-bold text-[8px] lg:text-sm absolute -top-[10px] left-1/2 -translate-x-1/2 -translate-y-full">N</p>
+              <p class="text-white font-bold text-[8px] lg:text-sm absolute top-1/2 -right-[13px] translate-x-full -translate-y-1/2">E</p>
+              <p class="text-white font-bold text-[8px] lg:text-sm absolute -bottom-[11px] left-1/2 -translate-x-1/2 translate-y-full">S</p>
+              <p class="text-white font-bold text-[8px] lg:text-sm absolute top-1/2 -left-[13px] -translate-x-full -translate-y-1/2">O</p>
+          </div>
+        </div>
+      </div>
+
       <img src="./static/img/colibri-logo.png" alt="Colibri Travel Planner logo" class="absolute top-5 left-5 lg:top-10 lg:left-10 w-[80px] h-[54px] lg:w-[127px] lg:h-auto logo">
       <section class="flex flex-col absolute bottom-[92px] top-auto lg:top-1/2 lg:-translate-y-2/4  pr-5 left-5 lg:left-10 lg:w-2/3">
         <div class="flex self-end -translate-y-[100px] lg:-translate-y-[0] lg:translate-x-full relative numbers">
@@ -40,10 +79,10 @@
         <p class="font-normal text-base 2xl:text-2xl leading-[20px] lg:leading-[24px] lg:text-xl text-white w-11/12 lg:w-1/2 mb-10">Créez vos propres souvenirs inoubliables, avec une touche personnelle et un accompagnement bienveillant pour chaque étape de vos aventures, petites ou grandes.</p>
         <a href="#pourquoi" class="font-bold uppercase text-white py-3 px-4 text-sm flex justify-center w-full lg:w-fit blurred">Organisons votre voyage</a>
       </section>
-      <picture class="w-full h-screen flex">
+      <picture class="flex h-full lg:h-auto">
         <source media="(max-width: 767px)" srcset="./static/img/desktop-banner-mobile.webp" />
         <source media="(min-width: 768px)" srcset="./static/img/desktop-banner.webp" />
-        <img class="w-full h-screen object-cover aspect-[1440/1000]" src="./static/img/desktop-banner.webp" alt="">
+        <img class="w-full h-auto object-cover aspect-[1440/1000]" src="./static/img/desktop-banner.webp" alt="">
       </picture>
     </div>
 
@@ -230,8 +269,8 @@
 
               <div class="flex lg:hidden translate-x-full absolute -top-4 -right-4 -translate-y-full numbers">
                 <div class="flex flex-col">
-                  <p class="text-dark text-[8px] text-sm">+<span class="shuffle-number">40.76926211896542</span>,</p>
-                  <p class="text-dark text-[8px] text-sm">-<span class="shuffle-number">73.97491293566183</span></p>
+                  <p class="text-dark text-[8px] lg:text-sm">+<span class="shuffle-number">40.76926211896542</span>,</p>
+                  <p class="text-dark text-[8px] lg:text-sm">-<span class="shuffle-number">73.97491293566183</span></p>
                 </div>
                 <div class="line absolute left-0 bottom-0 -translate-x-full">
                     <div class="w-5 h-[1px] bg-dark"></div>
