@@ -9,10 +9,10 @@ import ShuffleSentence from './modules/ShuffleSentence'
 import { loader } from './modules/loader'
 
 document.addEventListener('DOMContentLoaded', () => {
-    loader()
     initVerticalSwiper()
     initHorizontalSwiper();
     new ShuffleSentence('.shuffle-number', 10)
     cursor()
     initLenis()
+    loader()
 })

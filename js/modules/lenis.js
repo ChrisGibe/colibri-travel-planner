@@ -10,6 +10,8 @@ export const initLenis = () => {
 
   requestAnimationFrame(raf);
 
+  lenis.scrollTo(0, 0)
+
   const navWhy = Array.from(document.querySelectorAll('.nav-link'))
   navWhy.map(nav => {
     const target = nav.getAttribute("href")
