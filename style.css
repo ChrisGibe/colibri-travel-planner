@@ -2,38 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "unbounded";
-  font-style: normal;
-  font-weight: 400;
-  src: url("static/fonts/unbounded/Unbounded-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "unbounded";
-  font-style: normal;
-  font-weight: 700;
-  src: url("static/fonts/unbounded/Unbounded-Bold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "poppins";
-  font-style: normal;
-  font-weight: 400;
-  src: url("static/fonts/poppins/Poppins-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "poppins";
-  font-style: normal;
-  font-weight: 700;
-  src: url("static/fonts/poppins/Poppins-Bold.woff2") format("woff2");
-  font-display: swap;
-}
-
 html,
 body {
   scrollbar-width: none;
@@ -58,10 +26,6 @@ html.lenis body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
-
-.unbounded {
-  font-family: "unbounded";
 }
 
 .logo {
@@ -182,6 +146,10 @@ nav {
 
 a {
   letter-spacing: 0.15em;
+}
+
+.text-animated-delay {
+  display: inline-block;
 }
 
 @keyframes rotateCompass {

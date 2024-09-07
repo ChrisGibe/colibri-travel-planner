@@ -4,7 +4,7 @@ import ShuffleSentence from './ShuffleSentence'
 
 gsap.registerPlugin(SplitText);
 
-export const loader = () => {
+export const loader = () => {    
   new SplitText(".text-animated", {type: "lines", linesClass: "lines", reduceWhiteSpace: true});
   new SplitText(".text-animated-delay", {type: "lines", linesClass: "lines", reduceWhiteSpace: true});
 
