@@ -61,7 +61,7 @@ class ShuffleSentence {
                 i === this.MAX_ITERATIONS ? this.endTimer(timer, container, text) : null;
     
                 i++
-            }, 70)
+            }, 120)
             
         })
     }

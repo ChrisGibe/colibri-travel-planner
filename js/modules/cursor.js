@@ -27,8 +27,6 @@ export const cursor = () => {
       });
     });
   });
-
-  console.log(topHover, cursorTop);
   
   topHover.addEventListener('mouseenter', () => {
     gsap.to(cursorBottom, { scale: 1})

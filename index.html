@@ -14,13 +14,13 @@
         <source srcset="./static/img/loader-bg.webp" />
         <img class="w-full h-screen object-cover aspect-[1440/1000]" src="./static/img/loader-bg.webp" alt="">
       </picture>
-      <div class="flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
-        <p class="text-6xl text-dirt font-unbounded relative z-50 opacity-0 hidden-text">
+      <div class="flex justify-center absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+        <p class="text-xl lg:text-4xl text-dirt font-unbounded relative z-50 opacity-0 hidden-text blur-[10px]">
           Créer vos souvenirs
         </p>
       </div>
     </div>
-    <nav role="navigation" class="hidden lg:flex justify-center fixed bottom-20 z-40 mx-auto left-0 right-0">
+    <nav role="navigation" class="hidden lg:flex justify-center fixed bottom-20 z-40 mx-auto left-0 right-0 translate-y-[400%]">
       <ul class="flex gap-28 px-5 lg:px-10 py-3 btn-link blurred">
         <li>
           <a href="#pourquoi" class="text-xs font-bold uppercase text-white nav-link">Pourquoi</a>
@@ -36,7 +36,7 @@
         </li>
       </ul>
     </nav>
-    <div class="hero-banner w-full h-screen relative translate-y-[15%]">
+    <div class="hero-banner w-full h-screen relative translate-y-[100px]">
 
       <div class="compass circle absolute top-12 right-12 w-[45px] h-[45px] !rounded-[45px] lg:w-[85px] lg:h-[85px] lg:!rounded-[85px] flex items-center justify-center blurred">
         <div class="compass-line w-full h-[1px] lg:h-[1.5px] absolute"></div>
@@ -60,22 +60,29 @@
       </div>
 
       <img src="./static/img/colibri-logo.png" alt="Colibri Travel Planner logo" class="absolute top-5 left-5 lg:top-10 lg:left-10 w-[80px] h-[54px] lg:w-[127px] lg:h-auto logo">
+      
       <section class="flex flex-col absolute bottom-[55px] top-auto lg:top-1/2 lg:-translate-y-2/4  pr-5 left-5 lg:left-10 lg:w-2/3">
         <div class="flex self-end -translate-y-[50px] lg:-translate-y-[0] lg:translate-x-full relative numbers">
           <div class="flex flex-col">
-            <p class="text-white text-[8px] lg:text-sm">+<span class="shuffle-number">14.635540500000001</span>,</p>
-            <p class="text-white text-[8px] lg:text-sm">-<span class="shuffle-number">61.02281400000001</span></p>
+            <p class="text-white text-[8px] lg:text-sm opacity-0 shuffle-para">+<span class="shuffle-number-loader">14.635540500000001</span>,</p>
+            <p class="text-white text-[8px] lg:text-sm opacity-0 shuffle-para">-<span class="shuffle-number-loader">61.02281400000001</span></p>
           </div>
           <div class="line absolute left-0 bottom-0 -translate-x-full">
-              <div class="w-5 lg:w-10 h-[1px] bg-white"></div>
-              <div class="w-5 lg:w-10 h-[1px] bg-white translate-x-1/2 rotate-90 relative top-[9px] lg:top-[19px]"></div>
+              <div class="w-5 lg:w-10 h-[1px] bg-white origin-right scale-0 number-line"></div>
+              <div class="h-5 w-[1px] lg:h-10 bg-white relative left-full -top-[1px] scale-0 origin-top number-line"></div>
           </div>
         </div>
-        <h1 class="text-ocean text-[56px] lg:text-8xl 2xl:text-9xl leading-h1-lh opacity-80 font-bold mb-4 font-unbounded">Colibri Travel Planner</h1>
-        <p class="font-normal text-base 2xl:text-2xl leading-[20px] lg:leading-[24px] lg:text-xl text-white w-11/12 lg:w-1/2 mb-10">Créez vos propres souvenirs inoubliables, avec une touche personnelle et un accompagnement bienveillant pour chaque étape de vos aventures, petites ou grandes.</p>
+        <h1 class="text-ocean text-[56px] lg:text-8xl 2xl:text-9xl leading-h1-lh opacity-80 font-bold mb-4 font-unbounded text-animated">Colibri Travel Planner</h1>
+        <p class="hidden lg:block font-normal text-base 2xl:text-2xl leading-[20px] lg:leading-[24px] lg:text-xl text-white mb-10 text-animated-delay">
+          Créez vos propres souvenirs inoubliables, <br> avec une touche personnelle et un accompagnement bienveillant <br> pour chaque étape de vos aventures, petites ou grandes.
+        </p>
+        <p class="block lg:hidden font-normal text-base 2xl:text-2xl leading-[20px] lg:leading-[24px] lg:text-xl text-white mb-10 text-animated-delay">
+          Créez vos propres souvenirs inoubliables, <br> avec une touche personnelle et un <br> accompagnement bienveillant pour chaque <br> étape de vos aventures, petites ou grandes.
+        </p>
         <a href="#pourquoi" class="font-bold uppercase text-white py-3 px-4 text-sm flex lg:hidden justify-center w-full lg:w-fit blurred">Organisons votre voyage</a>
       </section>
-      <picture class="flex h-full lg:h-auto">
+
+      <picture class="h-full">
         <source media="(max-width: 767px)" srcset="./static/img/desktop-banner-mobile.webp" />
         <source media="(min-width: 768px)" srcset="./static/img/desktop-banner.webp" />
         <img class="w-full h-auto object-cover aspect-[390/844] lg:aspect-[1440/1000]" src="./static/img/desktop-banner.webp" alt="">
