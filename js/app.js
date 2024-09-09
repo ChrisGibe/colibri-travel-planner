@@ -8,6 +8,7 @@ import {cursor} from "./modules/cursor";
 import {loader} from "./modules/loader";
 import {scrollAnimation} from "./modules/scrollAnimation";
 import {loadFonts} from "./helpers/loadFonts";
+import {imgEffect} from "./modules/imgEffect";
 
 const fontsToLoad = [
   {name: "unbounded", url: "/fonts/unbounded/Unbounded-Regular.woff2", weight: "400", style: "normal"},
@@ -17,8 +18,9 @@ const fontsToLoad = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  loadFonts(fontsToLoad, [loader, scrollAnimation, initLenis]);
   initVerticalSwiper();
   initHorizontalSwiper();
   cursor();
-  loadFonts(fontsToLoad, [loader, scrollAnimation, initLenis]);
+  imgEffect();
 });

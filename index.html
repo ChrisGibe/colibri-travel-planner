@@ -8,6 +8,7 @@
     <meta name="description" content="En tant que Travel Planner, je vous aiderai à organiser vos voyages, qu'ils soient petits ou grands">
   </head>
   <body class="font-poppins leading-text w-full h-full relative">
+    <div id="canvas" class="w-full h-full absolute z-10"></div>
 
     <div class="loader fixed top-0 left-0 w-full h-screen z-50 origin-top bg-white">
       <picture class="w-full h-screen flex">
@@ -98,10 +99,11 @@
         </div>
         <div class="grid grid-cols-12 gap-x-4">
           <div class="col-span-12 lg:col-span-5 lg:col-start-2">
-            <picture class="w-full h-auto flex">
-              <source srcset="./static/img/horizontal-swiper/slide-one.webp" />
-              <img class="w-full h-auto flex" src="./static/img/horizontal-swiper/slide-one.webp" alt="">
-            </picture>
+            <div class="flex flex-wrap cursor-pointer multi-textures aspect-[258/261] lg:aspect-[553/560] relative z-50">
+              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/gabor.png" crossorigin="" data-sampler="displacement" />
+              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/horizontal-swiper/slide-one.jpg" crossorigin="" />
+              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/parallax/four.webp" crossorigin="" />
+            </div>
           </div>
         </div>
       </div>
