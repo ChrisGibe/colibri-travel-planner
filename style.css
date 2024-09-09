@@ -175,3 +175,16 @@ a {
     transform: rotate(360deg); /* On va plus loin que 0 pour éviter le saut */
   }
 }
+
+.line-draw {
+  stroke-dasharray: 100; /* Doit être suffisamment grand pour couvrir toute la longueur de la ligne */
+  stroke-dashoffset: 100; /* Masque complètement la ligne */
+  animation: draw 10s ease forwards; /* Animation de 2 secondes */
+}
+
+/* Animation CSS pour dessiner la ligne */
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; /* Affiche progressivement la ligne */
+  }
+}

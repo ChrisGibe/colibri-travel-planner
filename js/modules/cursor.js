@@ -29,18 +29,18 @@ export const cursor = () => {
   });
   
   topHover.addEventListener('mouseenter', () => {
-    gsap.to(cursorBottom, { scale: 1})
+    gsap.to(cursorBottom, {scale: 1})
   })
 
   topHover.addEventListener('mouseleave', () => {    
-    gsap.to(cursorBottom, { scale: 0})
+    gsap.to(cursorBottom, {scale: 0})
   })
 
   botttomHover.addEventListener('mouseenter', () => {
-    gsap.to(cursorTop, { scale: 1})
+    gsap.to(cursorTop, {scale: 1})
   })
 
   botttomHover.addEventListener('mouseleave', () => {    
-    gsap.to(cursorTop, { scale: 0})
+    gsap.to(cursorTop, {scale: 0})
   })
 };
