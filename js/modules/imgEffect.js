@@ -7,7 +7,7 @@ export const imgEffect = () => {
   const curtains = new Curtains({
     container: "canvas",
     watchScroll: false,
-    pixelRatio: Math.min(1.5, window.devicePixelRatio), // limit pixel ratio for performance
+    pixelRatio: Math.min(1, window.devicePixelRatio), // limit pixel ratio for performance
   });
 
   const planeElements = document.getElementsByClassName("multi-textures");
@@ -21,6 +21,16 @@ export const imgEffect = () => {
     isChanging: false,
     transitionTimer: 0,
   };
+
+    // handling errors
+    curtains.onError(function() {
+        // we will add a class to the document body to display original images
+        document.body.classList.add("no-curtains");
+    }).onContextLost(function() {
+        // on context lost, try to restore the context
+        curtains.restoreContext();
+    });
+
 
   curtains.disableDrawing();
 
@@ -38,7 +48,6 @@ export const imgEffect = () => {
   };
 
   const multiTexturesPlane = new Plane(curtains, planeElements[0], params);
-
   multiTexturesPlane
     .onLoading((texture) => {
       texture.setMinFilter(curtains.gl.LINEAR_MIPMAP_NEAREST);
@@ -102,5 +111,8 @@ export const imgEffect = () => {
 
       // update our transition timer uniform
       multiTexturesPlane.uniforms.transitionTimer.value = slideshowState.transitionTimer;
+      if(window.innerWidth < 680) {
+        multiTexturesPlane.relativeTranslation.y = 60
+      }
     });
 };

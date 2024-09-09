@@ -8,7 +8,7 @@
     <meta name="description" content="En tant que Travel Planner, je vous aiderai à organiser vos voyages, qu'ils soient petits ou grands">
   </head>
   <body class="font-poppins leading-text w-full h-full relative">
-    <div id="canvas" class="w-full h-full absolute z-10"></div>
+    <div id="canvas" class="w-screen h-full absolute z-10"></div>
 
     <div class="loader fixed top-0 left-0 w-full h-screen z-50 origin-top bg-white">
       <picture class="w-full h-screen flex">
@@ -39,7 +39,7 @@
       </ul>
     </nav>
 
-    <div class="hero-banner w-full h-screen relative translate-y-[100px]">
+    <div class="hero-banner w-full h-dvh relative translate-y-[100px]">
       <div class="compass circle absolute top-12 right-12 w-[45px] h-[45px] !rounded-[45px] lg:w-[85px] lg:h-[85px] lg:!rounded-[85px] flex items-center justify-center blurred">
         <div class="compass-line w-full h-[1px] lg:h-[1.5px] absolute"></div>
         <div class="compass-line w-full h-[1px] lg:h-[1.5px] absolute origin-center rotate-90"></div>
@@ -92,7 +92,7 @@
       <div class="px-5 lg:px-10 mx-auto">
         <div class="grid grid-cols-12 gap-x-4 mb-10">
           <div class="col-span-12 lg:col-span-8 lg:col-start-2">
-            <h2 class="text-[40px] text-6xl 2xl:text-7xl text-dirt font-unbounded mb-4 title-reveal">Pourquoi ?</h2>
+            <h2 class="text-4xl lg:text-6xl 2xl:text-7xl text-dirt font-unbounded mb-4 title-reveal">Pourquoi ?</h2>
             <p class="mb-6 2xl:text-2xl text-reveal">Organiser un voyage, c’est excitant, mais cela peut vite devenir stressant. En me confiant l’organisation, vous pourrez vraiment vous détendre et profiter.</p>
             <p class="2xl:text-2xl text-reveal">Je m’occupe de tout, des petites attentions aux détails pratiques, pour que votre voyage soit exactement comme vous l’imaginez. Plus besoin de passer des heures à chercher les meilleures options, je le fais pour vous. Ainsi, vous gagnez du temps, évitez les galères, et partez l’esprit tranquille, en sachant que tout est bien prévu.</p>
           </div>
@@ -101,10 +101,13 @@
           <div class="col-span-12 lg:col-span-5 lg:col-start-2">
             <div class="flex flex-wrap cursor-pointer multi-textures aspect-[258/261] lg:aspect-[553/560] relative z-50">
               <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/gabor.png" crossorigin="" data-sampler="displacement" />
-              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/horizontal-swiper/slide-one.jpg" crossorigin="" />
-              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/parallax/four.webp" crossorigin="" />
+              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/horizontal-swiper/slide-one.webp" crossorigin="" />
+              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/horizontal-swiper/slide-two.webp" crossorigin="" />
+              <img class="aspect-[553/560] w-full h-auto object-cover hidden" src="./static/img/horizontal-swiper/slide-three.webp" crossorigin="" />
             </div>
+            <div class="progress h-2 w-0 bg-forest mt-1"></div>
           </div>
+
         </div>
       </div>
     </div>
@@ -113,7 +116,7 @@
       <div class="px-5 lg:px-10 mx-auto">
         <div class="grid grid-cols-12 gap-x-4">
           <div class="col-span-12 lg:col-span-6 lg:col-start-2">
-            <h2 class="text-[40px] lg:text-6xl 2xl:text-7xl text-forest font-unbounded mb-4 title-reveal">Qui suis-je ?</h2>
+            <h2 class="text-4xl lg:text-6xl 2xl:text-7xl text-forest font-unbounded mb-4 title-reveal">Qui suis-je ?</h2>
             <p class="mb-6 lg:pr-6 2xl:text-2xl text-reveal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor est, auctor ut mauris et, consectetur convallis mauris. Aenean vel accumsan velit, a sagittis nibh.</p>
             <p class="mb-10 lg:pr-6 lg:mb-36 2xl:text-2xl text-reveal">Vestibulum hendrerit lorem non erat fringilla, sed lobortis est imperdiet. Donec posuere commodo orci, ac congue leo lacinia vitae. Integer maximus ullamcorper pellentesque. Ut purus mauris, scelerisque sed lectus quis, suscipit vulputate urna.</p>
             <ul class="hidden lg:flex relative bottom-0 w-full lg:w-auto z-10">
@@ -197,15 +200,15 @@
         </div>
         <ul class="grid grid-cols-3 lg:hidden relative bottom-0 w-full lg:w-auto z-10">
           <li class="col-span-1 relative flex justify-center items-stretch h-[120px]">
-            <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 185 120" preserveAspectRatio="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="0" x2="45" stroke="#143D3D" />
-              <line x1="185" x2="140" stroke="#143D3D" />
-              <line y1="0" y2="25" stroke="#143D3D" />
-              <line x1="185" y1="0" y2="25" x2="185" stroke="#143D3D" />
-              <line x1="0" y1="120" x2="45" y2="120" stroke="#143D3D" />
-              <line y1="120" y2="95" stroke="#143D3D" />
-              <line x1="185" y1="120" y2="95" x2="185" stroke="#143D3D" />
-              <line x1="185" y1="120" y2="120" x2="140" stroke="#143D3D" />
+            <svg class="absolute inset-0 w-full h-full overflow-visible frame-profil" viewBox="0 0 185 120" preserveAspectRatio="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <line class="frame-line" x1="0" x2="45" stroke="#143D3D" />
+              <line class="frame-line" x1="185" x2="140" stroke="#143D3D" />
+              <line class="frame-line" y1="0" y2="25" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="0" y2="25" x2="185" stroke="#143D3D" />
+              <line class="frame-line" x1="0" y1="120" x2="45" y2="120" stroke="#143D3D" />
+              <line class="frame-line" y1="120" y2="95" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="120" y2="95" x2="185" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="120" y2="120" x2="140" stroke="#143D3D" />
             </svg>
             <div class="flex flex-col items-center justify-center gap-2">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,13 +224,13 @@
             </div>
           </li>
           <li class="col-span-1 relative flex justify-center items-stretch">
-            <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 185 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" >
-              <line x1="0" x2="45" stroke="#143D3D" />
-              <line x1="185" x2="140" stroke="#143D3D" />
-              <line x1="185" y1="0" y2="25" x2="185" stroke="#143D3D" />
-              <line x1="0" y1="120" x2="45" y2="120" stroke="#143D3D" />
-              <line x1="185" y1="120" y2="95" x2="185" stroke="#143D3D" />
-              <line x1="185" y1="120" y2="120" x2="140" stroke="#143D3D" />
+            <svg class="absolute inset-0 w-full h-full overflow-visible frame-profil" viewBox="0 0 185 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" >
+              <line class="frame-line" x1="0" x2="45" stroke="#143D3D" />
+              <line class="frame-line" x1="185" x2="140" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="0" y2="25" x2="185" stroke="#143D3D" />
+              <line class="frame-line" x1="0" y1="120" x2="45" y2="120" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="120" y2="95" x2="185" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="120" y2="120" x2="140" stroke="#143D3D" />
             </svg>
             <div class="flex flex-col items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -244,13 +247,13 @@
             </div>
           </li>
           <li class="col-span-1 relative flex justify-center items-stretch">
-            <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 185 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="0" x2="45" stroke="#143D3D" />
-              <line x1="185" x2="140" stroke="#143D3D" />
-              <line x1="185" y1="0" y2="25" x2="185" stroke="#143D3D" />
-              <line x1="0" y1="120" x2="45" y2="120" stroke="#143D3D" />
-              <line x1="185" y1="120" y2="95" x2="185" stroke="#143D3D" />
-              <line x1="185" y1="120" y2="120" x2="140" stroke="#143D3D" />
+            <svg class="absolute inset-0 w-full h-full overflow-visible frame-profil" viewBox="0 0 185 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <line class="frame-line" x1="0" x2="45" stroke="#143D3D" />
+              <line class="frame-line" x1="185" x2="140" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="0" y2="25" x2="185" stroke="#143D3D" />
+              <line class="frame-line" x1="0" y1="120" x2="45" y2="120" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="120" y2="95" x2="185" stroke="#143D3D" />
+              <line class="frame-line" x1="185" y1="120" y2="120" x2="140" stroke="#143D3D" />
             </svg>
             <div class="flex flex-col items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -334,12 +337,12 @@
       <div class="px-5 lg:px-0 mx-auto">
         <div class="grid grid-cols-12 gap-x-4 mb-4">
           <div class="col-span-12 lg:col-span-5 lg:col-start-2">
-            <h2 class="text-[40px] text-6xl text-dirt font-unbounded title-reveal">Comment <br> ça se passe ?</h2>
+            <h2 class="text-4xl lg:text-6xl text-dirt font-unbounded title-reveal">Comment <br> ça se passe ?</h2>
           </div>
         </div>
         <div class="grid grid-cols-12 gap-x-4 mb-10 lg:mb-20">
           <div class="col-span-12 lg:col-span-7 lg:col-start-2">
-            <p class="text-xl text-reveal">Découvrez comment, en quelques étapes simples, votre voyage de rêve prend forme grâce à l'expertise de votre travel planner. Chaque détail est soigneusement orchestré pour vous offrir une expérience unique et sans stress.</p>
+            <p class="text-base lg:text-xl text-reveal">Découvrez comment, en quelques étapes simples, votre voyage de rêve prend forme grâce à l'expertise de votre travel planner. Chaque détail est soigneusement orchestré pour vous offrir une expérience unique et sans stress.</p>
           </div>
         </div>
         <div class="grid grid-cols-12 gap-x-4 lg:mb-20 relative">
@@ -551,7 +554,7 @@
         <div class="hidden lg:block bg-white w-4/12 mx-auto mb-6 lg:mb-20 line"></div>
         <div class="grid grid-cols-12 gap-x-4 mb-6 lg:mb-20 middle">
           <div class="col-span-12 lg:col-span-8 lg:col-start-3 text-center">
-            <h2 class="font-normal text-white text-[40px] lg:text-5xl font-unbounded mb-10 title-reveal">Organisons votre voyage</h2>
+            <h2 class="font-normal text-white text-4xl lg:text-5xl font-unbounded mb-10 title-reveal">Organisons votre voyage</h2>
             <a class="font-bold uppercase text-white py-3 px-4 text-sm hollow" href="mailto:contact@colibritrabelplanner">Contactons-nous</a>
           </div>
         </div>
