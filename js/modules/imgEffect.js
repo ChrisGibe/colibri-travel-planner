@@ -111,8 +111,8 @@ export const imgEffect = () => {
 
       // update our transition timer uniform
       multiTexturesPlane.uniforms.transitionTimer.value = slideshowState.transitionTimer;
-/*       if(window.innerWidth < 680) {
+      if(window.innerWidth < 680) {
         multiTexturesPlane.relativeTranslation.y = 60
-      } */
+      }
     });
 };
