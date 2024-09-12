@@ -4,7 +4,6 @@ import {DrawSVGPlugin} from "../libs/DrawSVGPlugin.js";
 import {ScrollTrigger} from "gsap/all"
 
 export const scrollAnimation = () => {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
     
     new SplitText(".text-reveal", {type: "lines", linesClass: "lines", reduceWhiteSpace: true});
@@ -41,28 +40,42 @@ export const scrollAnimation = () => {
         })
     });
 
-    // Square border svg animation from "who i am" section
+    // Square border svg animation from "who i am" section desktop
     gsap.from('.frame-line', {
         drawSVG: "0%",
         duration: 1.2,
         ease: "power4.out",
         scrollTrigger: {
             trigger: '.frame-profil',
-            start: isMobile ? "top 50%" : "top 60%",
+            start: "top 60%",
+            toggleActions: "play none play reverse",
+        } 
+    })
+
+    // Square border svg animation from "who i am" section mobile
+    gsap.from('.frame-line-mobile', {
+        drawSVG: "0%",
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: '.frame-profil-mobile',
+            start: "top 70%",
             toggleActions: "play none play reverse",
         } 
     })
 
     // "Pricing list" svg animation
-    gsap.from('.path-animated', {
-        drawSVG: "0%",
-        duration: 2,
-        ease: "expo.out",
-        scrollTrigger: {
-            trigger: '.path-animated',
-            start: "top 60%",
-            toggleActions: "play none play reverse",
-        } 
+    gsap.utils.toArray('.path-animated').forEach(path => {
+        gsap.from(path, {
+            drawSVG: "0%",
+            duration: 2,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: path,
+                start: "top 60%",
+                toggleActions: "play none play reverse",
+            } 
+        })
     })
 
     // "Pricing list" svg animation
@@ -81,10 +94,10 @@ export const scrollAnimation = () => {
     })
     
     // "Parallax" effect
-    if(!isMobile) {
+    if(!window.isMobile) {
         let speedElements = gsap.utils.toArray("[data-speed]");
         speedElements.forEach((el, i) => {
-            let speed = parseFloat(el.getAttribute("data-speed"));
+            let speed = parseFloat(el.getAttribute("data-speed"))
             gsap.fromTo(el, 
                 {
                     y: 0
@@ -101,7 +114,7 @@ export const scrollAnimation = () => {
                             let start = Math.max(0, self.start),
                                 distance = self.end - start,
                                 end = start + (distance / speed);
-
+    
                             self.setPositions(start, end);
                             self.animation.vars.y = (end - start) * (1 - speed);
                             self.animation.invalidate().progress(1).progress(self.progress);
@@ -111,4 +124,18 @@ export const scrollAnimation = () => {
             )
         })
     }
+
+    // Circle svg aninmation
+    gsap.utils.toArray('.circle-animated').forEach(circle => {
+        const tl = gsap.timeline({ repeat: -1 })
+
+        const paths = Array.from(circle.querySelectorAll('path'))
+        const pathsReversed = paths.reverse()
+
+        tl
+        .to(paths, {opacity: 0, stagger: 0.1, duration: 0.1 })
+        .to(pathsReversed, {opacity: 1, stagger: 0.1, duration: 0.8 })
+    })
+
+    ScrollTrigger.refresh();
 }
