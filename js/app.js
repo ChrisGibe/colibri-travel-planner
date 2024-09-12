@@ -1,3 +1,5 @@
+window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 import "../style.css";
 import "swiper/css/bundle";
 

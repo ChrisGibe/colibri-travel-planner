@@ -1,9 +1,6 @@
 import Lenis from "lenis";
 
-export const initLenis = () => {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-  if(!isMobile) {
+export const initLenis = () => {  
     const lenis = new Lenis();
 
     function raf(time) {
@@ -15,12 +12,18 @@ export const initLenis = () => {
   
     lenis.scrollTo(0, 0)
   
-    const navWhy = Array.from(document.querySelectorAll('.nav-link'))
-    navWhy.map(nav => {
+    const navLink = Array.from(document.querySelectorAll('.nav-link'))
+    const navLinkMobile = document.querySelector('.nav-link-mobile')
+
+    navLink.map(nav => {
       const target = nav.getAttribute("href")
       nav.addEventListener('click', () => {
           lenis.scrollTo(target, { offset : 50 })
       })
     })
-  }
+
+    const targetMobile = navLinkMobile.getAttribute("href")
+    navLinkMobile.addEventListener('click', () => {
+        lenis.scrollTo(targetMobile, { offset : 50 })
+    })
 };

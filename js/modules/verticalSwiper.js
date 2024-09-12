@@ -3,10 +3,7 @@ import { Pagination, A11y } from 'swiper/modules';
 
 
 export const initVerticalSwiper = () => {
-    const topHover = document.querySelector('.top-hover')
-    const botttomHover = document.querySelector('.bottom-hover')
-
-    const swiper = new Swiper(".mySwiperVertical", {
+    new Swiper(".mySwiperVertical", {
         modules: [Pagination, A11y],
         direction: "vertical",
         slidesPerView: 1,
@@ -16,12 +13,4 @@ export const initVerticalSwiper = () => {
           clickable: true,
         },
     });
-
-    topHover.addEventListener('click', () => {
-      swiper.slidePrev()
-    })
-
-    botttomHover.addEventListener('click', () => {
-      swiper.slideNext()
-    })
 }
