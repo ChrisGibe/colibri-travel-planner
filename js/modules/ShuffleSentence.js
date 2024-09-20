@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/all"
+
 class ShuffleSentence {
     /**
      * Shuffle animation for a sentence
@@ -8,6 +11,31 @@ class ShuffleSentence {
         this.containers = document.querySelectorAll(container)
         this.MAX_ITERATIONS = iterations;
         this.animated();
+
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
+
+    animation(container) {
+        const text = container.innerHTML
+        const textSplitted = text.split(' ')
+        
+        let i = 0;
+        let timer = setInterval(() => {
+
+            textSplitted.forEach((element, index) => {
+                if(element.length > 0) {
+                    const splittedWord = this.shuffleArray(element.split(''))
+                    textSplitted[index] = splittedWord
+                }
+            });
+
+            container.innerText = textSplitted.join(' ').toString()
+            
+            i === this.MAX_ITERATIONS ? this.endTimer(timer, container, text) : null;
+
+            i++
+        }, 120)   
     }
 
     /**
@@ -42,30 +70,15 @@ class ShuffleSentence {
 
     animated() {
         this.containers.forEach(container => {
-
-            const text = container.innerHTML
-            const textSplitted = text.split(' ')
-            
-            let i = 0;
-            let timer = setInterval(() => {
-
-                textSplitted.forEach((element, index) => {
-                    if(element.length > 0) {
-                        const splittedWord = this.shuffleArray(element.split(''))
-                        textSplitted[index] = splittedWord
-                    }
-                });
-    
-                container.innerText = textSplitted.join(' ').toString()
-                
-                i === this.MAX_ITERATIONS ? this.endTimer(timer, container, text) : null;
-    
-                i++
-            }, 120)
-            
+            this.animation(container)            
         })
     }
 
+    animatedOnScroll() {
+        this.containers.forEach(container => {
+            this.animation(container)            
+        })
+    }
 
     /**
      * Shuffle the Array
