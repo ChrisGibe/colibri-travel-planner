@@ -137,5 +137,28 @@ export const scrollAnimation = () => {
         .to(pathsReversed, {opacity: 1, stagger: 0.1, duration: 0.8 })
     })
 
+    // Navigation color
+    gsap.set('.nav-link', {color: '#ffffff'})
+    gsap.to('.nav-link', {
+        color: '#654D40',
+        duration: 0.3,
+        scrollTrigger: {
+            trigger: '.first-section',
+            start: "top 90%",
+            toggleActions: "play none play reverse",
+        }
+    })
+
+    // Nav UL backgroun
+    gsap.to('.list-links', {
+        background: 'linear-gradient(0deg, rgba(20, 61, 61, 0.2) 0%, rgba(20, 61, 61, 0) 100%), radial-gradient(194.78% 165.85% at 50% 100%, rgba(255, 255, 255, 1) 0%, rgba(57, 57, 57, 0.1) 100%)',
+        duration: 0.3,
+        scrollTrigger: {
+            trigger: '.first-section',
+            start: "top 90%",
+            toggleActions: "play none play reverse",
+        }
+    })
+
     ScrollTrigger.refresh();
 }

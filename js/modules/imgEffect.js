@@ -95,7 +95,7 @@ export const imgEffect = () => {
           slideshowState.transitionTimer = 0;
         }, 1700); // add a bit of margin to the timer
         
-      }, 4000);
+      }, 2000);
     })
     .onRender(() => {
       // increase or decrease our timer based on the active texture value
